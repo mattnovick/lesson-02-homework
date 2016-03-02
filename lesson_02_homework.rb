@@ -41,21 +41,21 @@ class Waitlist
   attr_accessor :list
  
   def initialize
-      @list = []
+    @list = []
   end
 
   def add_party(name_of_party)
-      @list << name_of_party
-      return "I added #{name_of_party} to the list"
+    @list << name_of_party
+    return "I added #{name_of_party} to the list"
   end
 
   def list
-      @list
+    @list
   end
  
   def seat
-      @list.shift
-      return "Someone was seated"
+    subfirst = @list.shift
+    return @list
   end
 end
 
@@ -67,6 +67,6 @@ puts waitlist.add_party("Maria for 2")
 puts waitlist.add_party("Vince for 8")
 puts waitlist.list
 puts waitlist.seat
-puts waitlist.list
+
 
 
